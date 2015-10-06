@@ -1,0 +1,8 @@
+{
+  "name": "Node.js Telegram SnaityBOT script",
+  "description": "Telegram SnaityBOT script",
+  "repository": "https://github.com/snaity/node-telegram-snaitybot",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "telegrambot"],
+  "image": "heroku/nodejs"
+}
