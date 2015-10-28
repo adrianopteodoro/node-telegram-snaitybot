@@ -65,9 +65,9 @@ bot.on('message', function (msg) {
             bot.sendChatAction(chatId, "typing");
 
             if (hasUsername) {
-                bot.sendMessage(chatId, "@" + msg.from.username + ", i'm just a robot!");
+                bot.sendMessage(chatId, "@" + msg.from.username + ": " + msg.text);
             } else {
-                bot.sendMessage(chatId, msg.from.first_name + " " + msg.from.last_name + ", i'm just a robot!");
+                bot.sendMessage(chatId, msg.from.first_name + " " + msg.from.last_name + ": " + msg.text);
             }
         } else {
             console.log("A chat from @%s", msg.from.username);
