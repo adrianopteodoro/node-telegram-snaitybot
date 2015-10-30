@@ -1,6 +1,6 @@
 {
   "name": "node-js-snaitybotd",
-  "version": "0.1",
+  "version": "0.1.1",
   "description": "Telegram SnaityBOT script",
   "main": "index.js",
   "scripts": {
