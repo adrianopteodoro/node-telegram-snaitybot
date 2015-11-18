@@ -12,7 +12,7 @@ bot.getMe().then(function (me) {
 
 bot.on('message', function (msg) {
     //DEBUG ONLY
-    console.log(msg);
+    //console.log(msg);
 
     var hasUsername = (typeof msg.from.username !== 'undefined');
 
@@ -20,14 +20,14 @@ bot.on('message', function (msg) {
 
 
     if (typeof msg.new_chat_title !== 'undefined') {
-        bot.sendChatAction(chatId, "typing");
+        /*bot.sendChatAction(chatId, "typing");
         if (hasUsername) {
             bot.sendMessage(chatId, "@" + msg.from.username + ", trocou nome do grupo para " + msg.new_chat_title);
         } else {
             bot.sendMessage(chatId, msg.from.first_name + " " + msg.from.last_name + ", trocou nome do grupo para " + msg.new_chat_title);
-        }
+        }*/
     } else if (typeof msg.left_chat_participant !== 'undefined') {
-        bot.sendChatAction(chatId, "typing");
+        /*bot.sendChatAction(chatId, "typing");
         var leftHasuser = (typeof msg.left_chat_participant.username !== 'undefined');
         if (hasUsername) {
             if (leftHasuser) {
@@ -41,9 +41,9 @@ bot.on('message', function (msg) {
             } else {
                 bot.sendMessage(chatId, msg.from.first_name + " " + msg.from.last_name + ", removeu " + msg.left_chat_participant.first_name + " " + msg.left_chat_participant.last_name + " do grupo");
             }
-        }
+        }*/
     } else if (typeof msg.new_chat_participant !== 'undefined') {
-        bot.sendChatAction(chatId, "typing");
+        /*bot.sendChatAction(chatId, "typing");
         var newHasuser = (typeof msg.new_chat_participant.username !== 'undefined');
         if (hasUsername) {
             if (newHasuser) {
@@ -57,10 +57,10 @@ bot.on('message', function (msg) {
             } else {
                 bot.sendMessage(chatId, msg.from.first_name + " " + msg.from.last_name + ", adicionou " + msg.new_chat_participant.first_name + " " + msg.new_chat_participant.last_name + " ao grupo");
             }
-        }
+        }*/
     } else {
         if (typeof msg.chat.title !== 'undefined') {
-            console.log("Mention from @%s in %s group chat", msg.from.username, msg.chat.title);
+            /*console.log("Mention from @%s in %s group chat", msg.from.username, msg.chat.title);
 
             bot.sendChatAction(chatId, "typing");
 
@@ -68,7 +68,7 @@ bot.on('message', function (msg) {
                 bot.sendMessage(chatId, "@" + msg.from.username + ": " + msg.text);
             } else {
                 bot.sendMessage(chatId, msg.from.first_name + " " + msg.from.last_name + ": " + msg.text);
-            }
+            }*/
         } else {
             console.log("A chat from @%s", msg.from.username);
             bot.sendChatAction(groupId, "typing");
